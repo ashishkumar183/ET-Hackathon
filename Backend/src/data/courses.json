@@ -1,0 +1,61 @@
+[
+  { "id": "course_001", "title": "Stock Market Basics", "level": "beginner", "duration": "2 hours", "tags": ["stocks","learning"], "goal": "learn", "suitability": ["student","young_professional"], "description": "Introduction to stock market concepts" },
+  { "id": "course_002", "title": "Fundamental Analysis 101", "level": "beginner", "duration": "3 hours", "tags": ["stocks","analysis"], "goal": "learn", "suitability": ["student","investor"], "description": "Learn how to analyze company fundamentals" },
+  { "id": "course_003", "title": "Technical Analysis Basics", "level": "beginner", "duration": "3 hours", "tags": ["trading","charts"], "goal": "learn", "suitability": ["trader","student"], "description": "Understand charts and indicators" },
+  { "id": "course_004", "title": "Mutual Funds for Beginners", "level": "beginner", "duration": "2 hours", "tags": ["mutual_funds","low_risk"], "goal": "learn", "suitability": ["family","student"], "description": "Start investing in mutual funds" },
+  { "id": "course_005", "title": "Personal Finance Mastery", "level": "beginner", "duration": "4 hours", "tags": ["finance","planning"], "goal": "learn", "suitability": ["young_professional","family"], "description": "Manage your money effectively" },
+
+  { "id": "course_006", "title": "Options Trading Basics", "level": "intermediate", "duration": "4 hours", "tags": ["options","trading"], "goal": "learn", "suitability": ["trader"], "description": "Introduction to options trading" },
+  { "id": "course_007", "title": "Futures Trading Guide", "level": "intermediate", "duration": "4 hours", "tags": ["futures","trading"], "goal": "learn", "suitability": ["trader"], "description": "Learn futures trading strategies" },
+  { "id": "course_008", "title": "Swing Trading Strategies", "level": "intermediate", "duration": "3 hours", "tags": ["trading","short_term"], "goal": "learn", "suitability": ["trader","young_professional"], "description": "Capture short-term market moves" },
+  { "id": "course_009", "title": "Value Investing", "level": "intermediate", "duration": "5 hours", "tags": ["stocks","long_term"], "goal": "learn", "suitability": ["investor"], "description": "Invest like Warren Buffett" },
+  { "id": "course_010", "title": "Dividend Investing", "level": "intermediate", "duration": "3 hours", "tags": ["income","stocks"], "goal": "learn", "suitability": ["family","investor"], "description": "Earn passive income from stocks" },
+
+  { "id": "course_011", "title": "Advanced Options Strategies", "level": "advanced", "duration": "6 hours", "tags": ["options","advanced"], "goal": "learn", "suitability": ["trader"], "description": "Master complex options strategies" },
+  { "id": "course_012", "title": "Algorithmic Trading", "level": "advanced", "duration": "7 hours", "tags": ["algo","trading"], "goal": "learn", "suitability": ["trader"], "description": "Automate your trading strategies" },
+  { "id": "course_013", "title": "Portfolio Management", "level": "advanced", "duration": "5 hours", "tags": ["portfolio","investment"], "goal": "learn", "suitability": ["investor"], "description": "Optimize your investment portfolio" },
+  { "id": "course_014", "title": "Risk Management in Trading", "level": "advanced", "duration": "4 hours", "tags": ["risk","trading"], "goal": "learn", "suitability": ["trader","investor"], "description": "Minimize losses and manage risks" },
+  { "id": "course_015", "title": "Behavioral Finance", "level": "advanced", "duration": "3 hours", "tags": ["psychology","finance"], "goal": "learn", "suitability": ["investor"], "description": "Understand investor psychology" },
+
+  { "id": "course_016", "title": "Crypto Investing Basics", "level": "beginner", "duration": "2 hours", "tags": ["crypto","high_risk"], "goal": "learn", "suitability": ["young_professional","trader"], "description": "Start investing in cryptocurrency" },
+  { "id": "course_017", "title": "Tax Planning Essentials", "level": "beginner", "duration": "3 hours", "tags": ["tax","planning"], "goal": "learn", "suitability": ["family","young_professional"], "description": "Save taxes legally" },
+  { "id": "course_018", "title": "Real Estate Investing", "level": "intermediate", "duration": "4 hours", "tags": ["real_estate","long_term"], "goal": "learn", "suitability": ["investor"], "description": "Invest in property smartly" },
+  { "id": "course_019", "title": "Gold Investment Strategies", "level": "beginner", "duration": "2 hours", "tags": ["gold","low_risk"], "goal": "learn", "suitability": ["family"], "description": "Invest in gold effectively" },
+  { "id": "course_020", "title": "ETF Investing Guide", "level": "beginner", "duration": "2 hours", "tags": ["etf","low_risk"], "goal": "learn", "suitability": ["student","investor"], "description": "Learn ETF investing" },
+
+  { "id": "course_021", "title": "Intraday Trading Mastery", "level": "advanced", "duration": "5 hours", "tags": ["intraday","trading"], "goal": "learn", "suitability": ["trader"], "description": "Master intraday trading" },
+  { "id": "course_022", "title": "Financial Planning for Families", "level": "beginner", "duration": "3 hours", "tags": ["finance","family"], "goal": "learn", "suitability": ["family"], "description": "Plan finances for your family" },
+  { "id": "course_023", "title": "Retirement Planning", "level": "beginner", "duration": "3 hours", "tags": ["retirement","long_term"], "goal": "learn", "suitability": ["family"], "description": "Plan your retirement early" },
+  { "id": "course_024", "title": "Wealth Creation Blueprint", "level": "intermediate", "duration": "4 hours", "tags": ["wealth","long_term"], "goal": "learn", "suitability": ["investor"], "description": "Build long-term wealth" },
+  { "id": "course_025", "title": "Passive Income Strategies", "level": "intermediate", "duration": "3 hours", "tags": ["income","passive"], "goal": "learn", "suitability": ["investor","family"], "description": "Earn passive income streams" },
+
+  { "id": "course_026", "title": "IPO Investing Guide", "level": "beginner", "duration": "2 hours", "tags": ["ipo","stocks"], "goal": "learn", "suitability": ["student","investor"], "description": "Invest in IPOs smartly" },
+  { "id": "course_027", "title": "Derivatives Deep Dive", "level": "advanced", "duration": "6 hours", "tags": ["derivatives","advanced"], "goal": "learn", "suitability": ["trader"], "description": "Advanced derivatives trading" },
+  { "id": "course_028", "title": "Stock Picking Strategies", "level": "intermediate", "duration": "4 hours", "tags": ["stocks","analysis"], "goal": "learn", "suitability": ["investor"], "description": "Pick winning stocks" },
+  { "id": "course_029", "title": "Financial Modeling Basics", "level": "advanced", "duration": "5 hours", "tags": ["modeling","finance"], "goal": "learn", "suitability": ["investor"], "description": "Build financial models" },
+  { "id": "course_030", "title": "Debt Management", "level": "beginner", "duration": "2 hours", "tags": ["debt","planning"], "goal": "learn", "suitability": ["young_professional"], "description": "Manage and reduce debt" },
+
+  { "id": "course_031", "title": "Budgeting 101", "level": "beginner", "duration": "1.5 hours", "tags": ["budget","finance"], "goal": "learn", "suitability": ["student"], "description": "Learn budgeting basics" },
+  { "id": "course_032", "title": "Emergency Fund Planning", "level": "beginner", "duration": "2 hours", "tags": ["emergency","finance"], "goal": "learn", "suitability": ["family","young_professional"], "description": "Build emergency savings" },
+  { "id": "course_033", "title": "Stock Market Psychology", "level": "intermediate", "duration": "3 hours", "tags": ["psychology","trading"], "goal": "learn", "suitability": ["trader"], "description": "Control emotions in trading" },
+  { "id": "course_034", "title": "Global Markets Overview", "level": "intermediate", "duration": "3 hours", "tags": ["global","markets"], "goal": "learn", "suitability": ["investor"], "description": "Understand global markets" },
+  { "id": "course_035", "title": "Startup Investing", "level": "advanced", "duration": "5 hours", "tags": ["startup","high_risk"], "goal": "learn", "suitability": ["investor"], "description": "Invest in startups" },
+
+  { "id": "course_036", "title": "Bond Investing Basics", "level": "beginner", "duration": "2 hours", "tags": ["bonds","low_risk"], "goal": "learn", "suitability": ["family"], "description": "Invest in bonds safely" },
+  { "id": "course_037", "title": "Forex Trading Guide", "level": "intermediate", "duration": "4 hours", "tags": ["forex","trading"], "goal": "learn", "suitability": ["trader"], "description": "Trade currency markets" },
+  { "id": "course_038", "title": "Commodity Trading", "level": "intermediate", "duration": "4 hours", "tags": ["commodity","trading"], "goal": "learn", "suitability": ["trader"], "description": "Trade commodities like gold, oil" },
+  { "id": "course_039", "title": "Wealth Management", "level": "advanced", "duration": "5 hours", "tags": ["wealth","finance"], "goal": "learn", "suitability": ["investor"], "description": "Manage high-value portfolios" },
+  { "id": "course_040", "title": "Insurance Planning", "level": "beginner", "duration": "2 hours", "tags": ["insurance","planning"], "goal": "learn", "suitability": ["family"], "description": "Choose right insurance plans" },
+
+  { "id": "course_041", "title": "Tax Saving Investments", "level": "beginner", "duration": "2 hours", "tags": ["tax_saving","investment"], "goal": "learn", "suitability": ["young_professional"], "description": "Save tax smartly" },
+  { "id": "course_042", "title": "Advanced Portfolio Strategies", "level": "advanced", "duration": "6 hours", "tags": ["portfolio","advanced"], "goal": "learn", "suitability": ["investor"], "description": "Advanced portfolio techniques" },
+  { "id": "course_043", "title": "Real Estate REIT Investing", "level": "intermediate", "duration": "3 hours", "tags": ["reit","real_estate"], "goal": "learn", "suitability": ["investor"], "description": "Invest in REITs" },
+  { "id": "course_044", "title": "Side Hustle Finance", "level": "beginner", "duration": "2 hours", "tags": ["income","side_hustle"], "goal": "learn", "suitability": ["student","young_professional"], "description": "Earn extra income" },
+  { "id": "course_045", "title": "Financial Independence (FIRE)", "level": "intermediate", "duration": "4 hours", "tags": ["fire","wealth"], "goal": "learn", "suitability": ["investor","young_professional"], "description": "Achieve financial freedom" },
+
+  { "id": "course_046", "title": "Startup Finance Basics", "level": "beginner", "duration": "3 hours", "tags": ["startup","finance"], "goal": "learn", "suitability": ["student","young_professional"], "description": "Finance for startups" },
+  { "id": "course_047", "title": "Angel Investing", "level": "advanced", "duration": "5 hours", "tags": ["startup","investment"], "goal": "learn", "suitability": ["investor"], "description": "Invest in early-stage startups" },
+  { "id": "course_048", "title": "Trading Indicators Deep Dive", "level": "advanced", "duration": "6 hours", "tags": ["indicators","trading"], "goal": "learn", "suitability": ["trader"], "description": "Master trading indicators" },
+  { "id": "course_049", "title": "Financial Goal Planning", "level": "beginner", "duration": "2 hours", "tags": ["planning","goals"], "goal": "learn", "suitability": ["family","young_professional"], "description": "Set and achieve financial goals" },
+  { "id": "course_050", "title": "Money Management Masterclass", "level": "intermediate", "duration": "4 hours", "tags": ["money","finance"], "goal": "learn", "suitability": ["young_professional","investor"], "description": "Manage money like a pro" }
+]

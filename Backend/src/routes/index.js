@@ -1,9 +1,15 @@
 const express = require('express');
-
-const v1Routes = require('./v1');
-
 const router = express.Router();
 
-router.use('/v1',v1Routes);
+// Import our controllers
+const { register, login } = require('../controllers/authController');
+const { handleChat } = require('../controllers/chatController');
+
+// --- AUTHENTICATION ROUTES ---
+router.post('/auth/register', register);
+router.post('/auth/login', login);
+
+// --- AI CONCIERGE ROUTE ---
+router.post('/chat', handleChat);
 
 module.exports = router;

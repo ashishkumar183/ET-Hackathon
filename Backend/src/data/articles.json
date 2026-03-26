@@ -1,0 +1,281 @@
+[
+  {
+    "id": "art_001",
+    "title": "Stock Market Basics: A Beginner’s Guide",
+    "category": "markets",
+    "tags": ["stocks","learning","beginner"],
+    "level": "beginner",
+    "readTime": "5 min",
+    "goal": "learn",
+    "suitability": ["student","young_professional"],
+    "summary": "Understand how stock markets work and how to start investing."
+  },
+  {
+    "id": "art_002",
+    "title": "Top 5 Stocks to Watch This Week",
+    "category": "markets",
+    "tags": ["stocks","trending"],
+    "level": "intermediate",
+    "readTime": "4 min",
+    "goal": "invest",
+    "suitability": ["investor","trader"],
+    "summary": "A curated list of stocks showing strong momentum."
+  },
+  {
+    "id": "art_003",
+    "title": "How Inflation Impacts Your Savings",
+    "category": "economy",
+    "tags": ["inflation","finance"],
+    "level": "beginner",
+    "readTime": "6 min",
+    "goal": "learn",
+    "suitability": ["family","young_professional"],
+    "summary": "Learn how rising prices affect your purchasing power."
+  },
+  {
+    "id": "art_004",
+    "title": "Mutual Funds vs Stocks: Which is Better?",
+    "category": "investment",
+    "tags": ["mutual_funds","stocks"],
+    "level": "beginner",
+    "readTime": "5 min",
+    "goal": "learn",
+    "suitability": ["student","family"],
+    "summary": "Compare mutual funds and stocks for smart investing."
+  },
+  {
+    "id": "art_005",
+    "title": "Beginner’s Guide to SIP Investment",
+    "category": "investment",
+    "tags": ["sip","mutual_funds"],
+    "level": "beginner",
+    "readTime": "4 min",
+    "goal": "invest",
+    "suitability": ["student","young_professional"],
+    "summary": "Start systematic investment plans with small amounts."
+  },
+
+  {
+    "id": "art_006",
+    "title": "Top Credit Cards for Cashback in India",
+    "category": "finance",
+    "tags": ["credit_card","cashback"],
+    "level": "beginner",
+    "readTime": "3 min",
+    "goal": "save",
+    "suitability": ["student","young_professional"],
+    "summary": "Best credit cards offering cashback benefits."
+  },
+  {
+    "id": "art_007",
+    "title": "Personal Loan vs Credit Card Loan",
+    "category": "finance",
+    "tags": ["loan","credit_card"],
+    "level": "intermediate",
+    "readTime": "5 min",
+    "goal": "borrow",
+    "suitability": ["young_professional"],
+    "summary": "Understand which borrowing option suits you better."
+  },
+  {
+    "id": "art_008",
+    "title": "Health Insurance: Why You Need It Early",
+    "category": "insurance",
+    "tags": ["insurance","health"],
+    "level": "beginner",
+    "readTime": "4 min",
+    "goal": "save",
+    "suitability": ["family"],
+    "summary": "Protect yourself and your family with insurance."
+  },
+  {
+    "id": "art_009",
+    "title": "Top Investment Strategies for 2026",
+    "category": "investment",
+    "tags": ["strategy","investment"],
+    "level": "advanced",
+    "readTime": "6 min",
+    "goal": "invest",
+    "suitability": ["investor"],
+    "summary": "Explore modern strategies to grow wealth."
+  },
+  {
+    "id": "art_010",
+    "title": "How to Build an Emergency Fund",
+    "category": "finance",
+    "tags": ["emergency","saving"],
+    "level": "beginner",
+    "readTime": "4 min",
+    "goal": "save",
+    "suitability": ["family","young_professional"],
+    "summary": "Create a safety net for unexpected expenses."
+  },
+
+  {
+    "id": "art_011",
+    "title": "Understanding NIFTY and SENSEX",
+    "category": "markets",
+    "tags": ["indices","stocks"],
+    "level": "beginner",
+    "readTime": "5 min",
+    "goal": "learn",
+    "suitability": ["student"],
+    "summary": "Learn how market indices work."
+  },
+  {
+    "id": "art_012",
+    "title": "Crypto Investment: Risks and Rewards",
+    "category": "investment",
+    "tags": ["crypto","high_risk"],
+    "level": "intermediate",
+    "readTime": "5 min",
+    "goal": "invest",
+    "suitability": ["trader"],
+    "summary": "Explore the volatile world of crypto investing."
+  },
+  {
+    "id": "art_013",
+    "title": "Gold vs Equity: Where Should You Invest?",
+    "category": "investment",
+    "tags": ["gold","stocks"],
+    "level": "intermediate",
+    "readTime": "5 min",
+    "goal": "invest",
+    "suitability": ["investor","family"],
+    "summary": "Compare gold and equity investments."
+  },
+  {
+    "id": "art_014",
+    "title": "How to Improve Your Credit Score",
+    "category": "finance",
+    "tags": ["credit_score","finance"],
+    "level": "beginner",
+    "readTime": "4 min",
+    "goal": "save",
+    "suitability": ["young_professional"],
+    "summary": "Tips to boost your creditworthiness."
+  },
+  {
+    "id": "art_015",
+    "title": "Top IPOs to Watch This Year",
+    "category": "markets",
+    "tags": ["ipo","stocks"],
+    "level": "intermediate",
+    "readTime": "4 min",
+    "goal": "invest",
+    "suitability": ["investor"],
+    "summary": "Upcoming IPOs with strong potential."
+  },
+
+  {
+    "id": "art_016",
+    "title": "What is Passive Income?",
+    "category": "finance",
+    "tags": ["income","passive"],
+    "level": "beginner",
+    "readTime": "3 min",
+    "goal": "learn",
+    "suitability": ["student"],
+    "summary": "Earn money without active work."
+  },
+  {
+    "id": "art_017",
+    "title": "Top Sectors for Investment in India",
+    "category": "markets",
+    "tags": ["sectors","investment"],
+    "level": "intermediate",
+    "readTime": "5 min",
+    "goal": "invest",
+    "suitability": ["investor"],
+    "summary": "Identify high-growth sectors."
+  },
+  {
+    "id": "art_018",
+    "title": "Loan EMI Calculation Explained",
+    "category": "finance",
+    "tags": ["loan","emi"],
+    "level": "beginner",
+    "readTime": "4 min",
+    "goal": "borrow",
+    "suitability": ["young_professional"],
+    "summary": "Understand how EMI works."
+  },
+  {
+    "id": "art_019",
+    "title": "Tax Saving Tips for Salaried Employees",
+    "category": "finance",
+    "tags": ["tax","saving"],
+    "level": "beginner",
+    "readTime": "5 min",
+    "goal": "save",
+    "suitability": ["young_professional"],
+    "summary": "Reduce your tax burden legally."
+  },
+  {
+    "id": "art_020",
+    "title": "Best Long-Term Investment Options",
+    "category": "investment",
+    "tags": ["long_term","investment"],
+    "level": "beginner",
+    "readTime": "5 min",
+    "goal": "invest",
+    "suitability": ["family","investor"],
+    "summary": "Build wealth over time."
+  },
+
+  {
+    "id": "art_021",
+    "title": "How to Start Trading in Stock Market",
+    "category": "markets",
+    "tags": ["trading","stocks"],
+    "level": "beginner",
+    "readTime": "5 min",
+    "goal": "learn",
+    "suitability": ["trader","student"],
+    "summary": "Step-by-step trading guide."
+  },
+  {
+    "id": "art_022",
+    "title": "Top Dividend Paying Stocks",
+    "category": "markets",
+    "tags": ["dividend","stocks"],
+    "level": "intermediate",
+    "readTime": "4 min",
+    "goal": "invest",
+    "suitability": ["investor","family"],
+    "summary": "Earn passive income through dividends."
+  },
+  {
+    "id": "art_023",
+    "title": "What is Risk Management?",
+    "category": "investment",
+    "tags": ["risk","investment"],
+    "level": "beginner",
+    "readTime": "3 min",
+    "goal": "learn",
+    "suitability": ["investor","trader"],
+    "summary": "Protect your investments from losses."
+  },
+  {
+    "id": "art_024",
+    "title": "Best Budgeting Apps in India",
+    "category": "finance",
+    "tags": ["budget","apps"],
+    "level": "beginner",
+    "readTime": "3 min",
+    "goal": "save",
+    "suitability": ["student"],
+    "summary": "Track and manage expenses easily."
+  },
+  {
+    "id": "art_025",
+    "title": "Understanding Market Volatility",
+    "category": "markets",
+    "tags": ["volatility","stocks"],
+    "level": "intermediate",
+    "readTime": "5 min",
+    "goal": "learn",
+    "suitability": ["trader"],
+    "summary": "Why markets go up and down."
+  }
+]
