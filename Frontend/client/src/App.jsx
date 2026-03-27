@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Landing from './pages/Landing';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
+import { 
+  FinancialNavigator, 
+  FinancialDashboard, 
+  EmptyDashboard 
+} from "./pages/FinancialDashboard";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -31,6 +36,8 @@ export default function App() {
                                             : <Navigate to="/onboarding" />
           } 
         />
+
+        <Route path="/navigator" element={<FinancialNavigator />} />
       </Routes>
     </Router>
   );
