@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Landing from './pages/Landing';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
+import NavBar from './components/NavBar';   
+
 import { 
   FinancialNavigator, 
   FinancialDashboard, 
@@ -14,7 +16,10 @@ export default function App() {
 
   return (
     <Router>
-     <Routes>
+
+      <NavBar />   {/* ✅ ADD THIS LINE */}
+
+      <Routes>
         <Route 
           path="/" 
           element={
@@ -23,7 +28,6 @@ export default function App() {
           } 
         />
 
-        {/* UPDATED: Let all logged-in users access onboarding to see their summary! */}
         <Route 
           path="/onboarding" 
           element={user ? <Onboarding user={user} setUser={setUser} /> : <Navigate to="/" />} 
