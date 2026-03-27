@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Landing from './pages/Landing'; // Changed this line!
+import Landing from './pages/Landing';
+import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
 
 export default function App() {
@@ -8,14 +9,27 @@ export default function App() {
 
   return (
     <Router>
-      <Routes>
+     <Routes>
         <Route 
           path="/" 
-          element={!user ? <Landing onLoginSuccess={setUser} /> : <Navigate to="/dashboard" />} 
+          element={
+            !user ? <Landing onLoginSuccess={setUser} /> 
+                  : (user.onboardingComplete ? <Navigate to="/dashboard" /> : <Navigate to="/onboarding" />)
+          } 
         />
+
+        {/* UPDATED: Let all logged-in users access onboarding to see their summary! */}
+        <Route 
+          path="/onboarding" 
+          element={user ? <Onboarding user={user} setUser={setUser} /> : <Navigate to="/" />} 
+        />
+
         <Route 
           path="/dashboard" 
-          element={user ? <Dashboard user={user} setUser={setUser} /> : <Navigate to="/" />} 
+          element={
+            user && user.onboardingComplete ? <Dashboard user={user} setUser={setUser} /> 
+                                            : <Navigate to="/onboarding" />
+          } 
         />
       </Routes>
     </Router>
