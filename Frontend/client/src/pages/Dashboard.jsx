@@ -251,9 +251,18 @@ export default function Dashboard({ user, setUser }) {
                             <p className="font-bold text-gray-200 text-lg">{item.name}</p>
                             <p className="text-xs text-gray-500 mt-1">₹{item.current_price || item.nav || '---'} • Large Cap</p>
                           </div>
+                          
+                          {/* DYNAMIC RISK PROFILE BADGE */}
                           <div className="w-1/5 text-center">
-                            <span className="text-yellow-600 text-xs font-bold bg-yellow-900/20 px-2 py-1 rounded">Moderate</span>
+                            <span className={`text-xs font-bold px-2 py-1 rounded ${
+                              item.risk_profile?.toLowerCase().includes('high') ? 'text-red-500 bg-red-900/20' : 
+                              item.risk_profile?.toLowerCase().includes('low') ? 'text-green-500 bg-green-900/20' : 
+                              'text-yellow-600 bg-yellow-900/20'
+                            }`}>
+                              {item.risk_profile || 'Moderate'}
+                            </span>
                           </div>
+
                           <div className="w-1/5 text-center text-green-500 font-bold text-lg">
                             +{item.return_1yr}
                           </div>
