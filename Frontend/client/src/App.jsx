@@ -17,7 +17,8 @@ export default function App() {
   return (
     <Router>
 
-      <NavBar />   {/* ✅ ADD THIS LINE */}
+      <NavBar />   
+      
 
       <Routes>
         <Route 

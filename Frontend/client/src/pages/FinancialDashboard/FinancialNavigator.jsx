@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavigatorSidebar from "./NavigatorSidebar";
 import FinancialDashboard from "./FinancialDashboard";
 import EmptyDashboard from "./EmptyDashboard";
@@ -7,13 +7,24 @@ export default function FinancialNavigator() {
   const [financialProfile, setFinancialProfile] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
 
+  useEffect(() => {
+    const saved = localStorage.getItem("financialProfile");
+    if (saved) {
+      setFinancialProfile(JSON.parse(saved));
+    }
+  }, []);
+
   return (
     <div className="navigator-root">
+      
       {/* Sidebar with chatbot */}
       <NavigatorSidebar
         onProfileComplete={(profile) => {
           setIsGenerating(true);
+
           setTimeout(() => {
+            localStorage.setItem("financialProfile", JSON.stringify(profile));
+
             setFinancialProfile(profile);
             setIsGenerating(false);
           }, 2200);
@@ -85,16 +96,21 @@ function GeneratingScreen() {
           fontSize: 28,
         }}>🧠</div>
       </div>
+
       <div style={{ textAlign: "center" }}>
         <div style={{
           fontFamily: "'Playfair Display', serif",
           fontSize: 24, fontWeight: 700,
           color: "#F0EDE8", marginBottom: 10,
-        }}>Building Your Financial Dashboard</div>
+        }}>
+          Building Your Financial Dashboard
+        </div>
+
         <div style={{ color: "#888580", fontSize: 14, maxWidth: 340 }}>
           Analysing your inputs, identifying gaps, and generating a personalised action plan...
         </div>
       </div>
+
       <div style={{ display: "flex", flexDirection: "column", gap: 8, width: "100%", maxWidth: 360 }}>
         {["Calculating net worth & gaps", "Running risk analysis", "Matching ET products", "Generating action timeline"].map((step, i) => (
           <div key={i} style={{
@@ -115,6 +131,7 @@ function GeneratingScreen() {
           </div>
         ))}
       </div>
+
       <style>{`
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
