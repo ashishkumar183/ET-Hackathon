@@ -7,6 +7,9 @@ const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
+// Initialize the Gemini Embedding Model (Required for RAG!)
+const embeddingModel = genAI.getGenerativeModel({ model: "gemini-embedding-001" });
+
 async function handleChat(req, res) {
     try {
         const { message, userId, currentPersona } = req.body;
@@ -66,15 +69,59 @@ async function handleChat(req, res) {
         }
 
         // =========================================================
-        // MODE 2: THE DASHBOARD ADVISOR
+        // MODE 2: THE DASHBOARD ADVISOR (RAG PIPELINE)
         // =========================================================
         else {
+            // 1. Generate Vector Embedding for the User's Message
+           const embeddingResult = await embeddingModel.embedContent(message);
+            // CRITICAL FIX: Slice the query vector to match our 768-dimension database!
+            const vector = Array.from(embeddingResult.embedding.values).slice(0, 768);
+
+            // 2. Search Pinecone Database for Real Data matches
+            // Make sure your Pinecone Index name matches what you used!
+            const index = pc.Index(process.env.PINECONE_INDEX_NAME || "et-concierge"); 
+            
+            const queryResponse = await index.query({
+                vector: vector,
+                topK: 3, // Pull the top 3 best matching items from your DB
+                includeMetadata: true
+            });
+
+            // 3. Extract the real JSON data from Pinecone
+            const retrievedContext = queryResponse.matches
+                .map(match => JSON.stringify(match.metadata))
+                .join('\n');
+
+            // 4. Force Groq to use real titles but mock the UI numbers
             const dashboardPrompt = `
             You are the ultimate Economic Times AI Concierge. 
             The user's profile is complete: Role: ${user.role}, Goal: ${user.goal}, Interests: ${user.interests}.
-            If they ask about investing or stocks, you MUST trigger 'FundScreener'.
+
+            HERE IS THE REAL DATA RETRIEVED FROM OUR DATABASE:
+            ${retrievedContext}
+            
+            INSTRUCTIONS:
+            1. If they ask about investing, stocks, courses, or news, you MUST trigger 'FundScreener'.
+            2. Read the REAL DATA above. Extract the 'title' and use it exactly as the 'name' in your JSON.
+            3. Since this is a Hackathon UI Demo and the database only contains titles, you MUST generate realistic hypothetical values for 'current_price' (e.g., "1250"), 'return_1yr' (e.g., "14.5%"), and 'risk_profile' (High/Moderate/Low).
+            4. Provide 2-3 items in the array.
+
             JSON OUTPUT FORMAT:
-            { "replyText": "...", "ui_trigger": "FundScreener", "widgetData": { "title": "Top Picks", "stocks": [{"name": "Infosys", "current_price": "1550", "return_1yr": "30%"}] } }
+            { 
+                "replyText": "Here are some top picks curated from our database based on your profile...", 
+                "ui_trigger": "FundScreener", 
+                "widgetData": { 
+                    "title": "Curated Recommendations", 
+                    "stocks": [
+                        {
+                            "name": "[Insert Real Title from Database here]", 
+                            "current_price": "[Generate realistic number]", 
+                            "return_1yr": "[Generate realistic percentage]",
+                            "risk_profile": "[High / Moderate / Low]" 
+                        }
+                    ] 
+                } 
+            }
             `;
 
             const chatCompletion = await groq.chat.completions.create({
@@ -85,7 +132,7 @@ async function handleChat(req, res) {
 
             const aiResponse = JSON.parse(chatCompletion.choices[0].message.content);
             
-            // 3. Add AI's reply to history and SAVE to MySQL
+            // 5. Add AI's reply to history and SAVE to MySQL
             history.push({ role: 'ai', content: aiResponse.replyText });
             await User.update({ chatHistory: history }, { where: { id: userId } });
 

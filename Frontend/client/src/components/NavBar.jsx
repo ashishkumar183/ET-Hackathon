@@ -15,7 +15,7 @@ export default function NavBar() {
     <header className="fixed top-0 left-0 w-full bg-[#080808]/90 backdrop-blur-md border-b border-gray-900 z-50 flex items-center justify-between px-8 py-4 shadow-2xl">
       
       <div className="text-gray-500 font-mono text-sm tracking-[0.15em] uppercase">
-        ET AI CONCIERGE — UI MOCKUP
+        ET AI CONCIERGE 
       </div>
       
       <div className="flex items-center gap-3">
