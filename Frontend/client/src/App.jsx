@@ -12,38 +12,50 @@ import {
 } from "./pages/FinancialDashboard";
 
 export default function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem("user");
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+    localStorage.setItem("user", JSON.stringify(userData));
+  };
 
   return (
     <Router>
+      <NavBar />
 
-      <NavBar />   
-      
+      <div style={{ paddingTop: "70px" }}>
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              !user 
+                ? <Landing onLoginSuccess={handleLogin} /> 
+                : (user.onboardingComplete 
+                    ? <Navigate to="/dashboard" /> 
+                    : <Navigate to="/onboarding" />)
+            } 
+          />
 
-      <Routes>
-        <Route 
-          path="/" 
-          element={
-            !user ? <Landing onLoginSuccess={setUser} /> 
-                  : (user.onboardingComplete ? <Navigate to="/dashboard" /> : <Navigate to="/onboarding" />)
-          } 
-        />
+          <Route 
+            path="/onboarding" 
+            element={user ? <Onboarding user={user} setUser={setUser} /> : <Navigate to="/" />} 
+          />
 
-        <Route 
-          path="/onboarding" 
-          element={user ? <Onboarding user={user} setUser={setUser} /> : <Navigate to="/" />} 
-        />
+          <Route 
+            path="/dashboard" 
+            element={
+              user && user.onboardingComplete 
+                ? <Dashboard user={user} setUser={setUser} /> 
+                : <Navigate to="/onboarding" />
+            } 
+          />
 
-        <Route 
-          path="/dashboard" 
-          element={
-            user && user.onboardingComplete ? <Dashboard user={user} setUser={setUser} /> 
-                                            : <Navigate to="/onboarding" />
-          } 
-        />
-
-        <Route path="/navigator" element={<FinancialNavigator />} />
-      </Routes>
+          <Route path="/navigator" element={<FinancialNavigator />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
