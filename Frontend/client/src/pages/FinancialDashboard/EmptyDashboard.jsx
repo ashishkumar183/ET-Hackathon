@@ -55,7 +55,7 @@ export default function EmptyDashboard() {
           margin: "0 auto 40px",   
           textAlign: "center"      
         }}>
-          Answer 9 quick questions in the chat on the left. Your personalised financial snapshot, gap analysis, and action plan will appear right here.
+          Answer a few quick questions in the chat on the left. Your personalised financial snapshot, gap analysis, and action plan will appear right here.
         </div>
 
         {/* Feature previews */}

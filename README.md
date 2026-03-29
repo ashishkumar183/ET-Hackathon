@@ -71,37 +71,54 @@ Follow these steps to get the ET AI Concierge up and running on your local machi
 * [Git](https://git-scm.com/)
 * API Keys for **Groq**, **Google Gemini**, and **Pinecone**.
 
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/ashishkumar183/ET-Hackathon.git]
-cd ET-Hackathon
+## 1. Clone the Repository
 
-2. Backend Setup
+```bash
+git clone https://github.com/ashishkumar183/ET-Hackathon.git
+cd ET-Hackathon
+```
+
+---
+
+## 2. Backend Setup
+
 Navigate to the backend directory, install dependencies, and configure your environment variables.
 
-Bash
+```bash
 cd Backend
 npm install
-Create a .env file in the Backend root and add your API keys:
+```
 
-Code snippet
+### Create a `.env` file
+
+```env
 PORT=3000
 GROQ_API_KEY=your_groq_api_key
 GEMINI_API_KEY=your_gemini_api_key
 PINECONE_API_KEY=your_pinecone_api_key
 PINECONE_INDEX_URL=your_pinecone_index_url
-Start the backend server:
+```
 
-Bash
+### Start the backend server
+
+```bash
 npm start
-# or node src/server.js
-The Express server should now be running on http://localhost:3000.
+# or
+node src/server.js
+```
 
-3. Frontend Setup
+The Express server should now be running on:  
+http://localhost:3000
+
+---
+
+## 3. Frontend Setup
+
 Open a new terminal window, navigate to the frontend directory, install dependencies, and start the React app.
 
-Bash
+```bash
 cd Frontend
 npm install
 npm run dev
 # or npm start depending on your bundler
+```
